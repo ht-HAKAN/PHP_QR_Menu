@@ -1,8 +1,7 @@
 <?php
 // Dostum Kafe - Menu Sayfasi
-// Kategoriler ve urunler veritabanindan cekilir
-// Tiklama islemleri $_GET ile yapilir (JS yok)
 
+// Kategoriler ve urunler veritabanindan cekilir
 require 'db.php'; // DB baglantisi
 
 // --- GET parametrelerini al ---
@@ -97,6 +96,8 @@ if ($secili_kategori > 0) {
                         <div class="urun-kart-item">
                             <?php if (!empty($urun['gorsel']) && file_exists($urun['gorsel'])) : ?>
                                 <img src="<?php echo $urun['gorsel']; ?>" alt="<?php echo $urun['isim']; ?>" class="urun-kart-img">
+                            <?php else : ?>
+                                <div class="urun-kart-img-placeholder"></div>
                             <?php endif; ?>
                             
                             <div class="urun-kart-bilgi">

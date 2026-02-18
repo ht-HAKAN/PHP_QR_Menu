@@ -142,7 +142,7 @@ body {
     font-size: 4rem;
 }
 
-/* Kategori overlay (isim yazisi) */
+/* Kategori overlay  */
 .kategori-overlay {
     position: absolute;
     bottom: 0;
@@ -180,6 +180,7 @@ body {
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    min-height: 140px;
 }
 
 .urun-kart-img {
@@ -190,10 +191,18 @@ body {
     flex-shrink: 0;
 }
 
+/* Gorsel yoksa bosluk birakilir */
+.urun-kart-img-placeholder {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
 .urun-kart-bilgi {
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .urun-kart-baslik {
@@ -209,6 +218,8 @@ body {
     font-size: 0.85rem;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .urun-kart-fiyat {
@@ -296,9 +307,15 @@ body {
     .urun-kart-item {
         padding: 16px;
         gap: 12px;
+        min-height: 110px;
     }
 
     .urun-kart-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .urun-kart-img-placeholder {
         width: 90px;
         height: 90px;
     }

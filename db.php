@@ -18,3 +18,4 @@ if (!$baglanti) {
 mysqli_set_charset($baglanti, "utf8mb4");
 ?>
 
+
